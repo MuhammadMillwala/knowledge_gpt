@@ -18,6 +18,9 @@ jobs:
 
       - name: Install dependencies
         run: pip install pylint black
+        
+      - name: Analysing the code with pylint
+        run: pylint $(git ls-files 'main.py')
 
   black:
     runs-on: ubuntu-latest
