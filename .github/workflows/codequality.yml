@@ -23,7 +23,7 @@ jobs:
       
       - name: Run Pylint
         run: |
-          pylint knowledge_gpt/main.py
+          pylint knowledge_gpt/prompts.py
 
   black:
     runs-on: ubuntu-latest
