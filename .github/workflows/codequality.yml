@@ -37,5 +37,10 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install pylint black
+        run: |
+          pip install pylint black
+          
+      - name: Run Black
+        run: |
+          black "<knowledge_gpt/main.py>"
 
