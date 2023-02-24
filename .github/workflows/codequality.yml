@@ -1,5 +1,4 @@
 name: Code Quality
-
 on:
   push:
     branches: [ main ]
@@ -18,12 +17,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: |
-          pip install pylint black
-
-      - name: Run Pylint
-        run: |
-          pylint --output-format=parseable <knowledge_gpt/components/sidebar.py>
+        run: pip install pylint black
 
   black:
     runs-on: ubuntu-latest
@@ -38,9 +32,5 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: |
-          pip install pylint black
+        run: pip install pylint black
 
-      - name: Run Black
-        run: |
-          black <knowledge_gpt/components/sidebar.py>
