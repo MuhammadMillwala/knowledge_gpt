@@ -19,6 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install pylint
+          pip install pylint-exit
       
       - name: Run Pylint
         run: |
