@@ -17,10 +17,10 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install pylint black
-        
-      - name: Analysing the code with pylint
-        run: pylint $(git ls-files 'main.py')
+        run: pip install pylint
+      
+      - name: Run Pylint
+        run: pylint --output-format=parseable <knowledge_gpt/main.py>
 
   black:
     runs-on: ubuntu-latest
