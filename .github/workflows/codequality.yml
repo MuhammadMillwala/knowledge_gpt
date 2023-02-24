@@ -22,7 +22,7 @@ jobs:
       
       - name: Run Pylint
         run: |
-          pylint $(git ls-files 'knowledge_gpt/main.py')
+          pylint knowledge_gpt/main.py
 
   black:
     runs-on: ubuntu-latest
