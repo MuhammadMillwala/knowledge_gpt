@@ -23,7 +23,7 @@ jobs:
 
       - name: Run Pylint
         run: |
-          pylint --output-format=parseable <knowledge_gpt/embeddings.py>
+          pylint --output-format=parseable <knowledge_gpt/components/sidebar.py>
 
   black:
     runs-on: ubuntu-latest
@@ -43,4 +43,4 @@ jobs:
 
       - name: Run Black
         run: |
-          black <knowledge_gpt/embeddings.py>
+          black <knowledge_gpt/components/sidebar.py>
