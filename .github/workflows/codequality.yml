@@ -20,7 +20,7 @@ jobs:
         run: pip install pylint
       
       - name: Run Pylint
-        run: pylint --output-format=parseable "<knowledge_gpt/main.py>"
+        run: pylint $(git ls-files 'knowledge_gpt/main.py')
 
   black:
     runs-on: ubuntu-latest
